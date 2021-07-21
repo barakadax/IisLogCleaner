@@ -54,7 +54,7 @@ if __name__ == "__main__":
         error_log.append("Files that couldn't delete:")
         iis_command("/stop")
         print(iis_command("/status"))
-        #delete_all_log(error_log)
+        delete_all_log(error_log)
         iis_command("/start")
         print(iis_command("/status"))
         if (len(error_log) != 1):
